@@ -1,22 +1,36 @@
-@charset "utf-8";
+/* Combined animation */
+@keyframes combinedAnime {
+    from {
+        filter: blur(3px);
+        transform: translate3d(0, 100%, 0) scale(1.02) skewY(7deg);
+        opacity: 0.4;
+    }
 
+    to {
+        filter: blur(0);
+        transform: translate3d(0, 0, 0) scale(1) skewY(0);
+        opacity: 1;
+    }
+}
 
-/*========= テキストを滑らかに出現させるためのCSS ===============*/
+/* Applying the new combined animation */
+.combinedEffect {
+    animation-name: combinedAnime;
+    animation-duration: 1.4s;
+    animation-fill-mode: forwards;
+}
+
+/* Additional styles to ensure the smooth text effect */
 span.smoothText {
-  overflow: hidden;
-  display: block;
+    overflow: hidden;
+    display: block;
 }
 
-/* アニメーションで傾斜がついている文字列を水平に戻す*/
-span.smoothTextTrigger{
-  transition: 1s ease-in-out;
-  transform: translate3d(0,100%,0) skewY(7deg);
-  transform-origin: left;
-  display: block;
+span.smoothTextTrigger {
+    transition: 1s ease-in-out;
+    display: block;
 }
-span.smoothTextTrigger.smoothTextAppear{
-    transform: translate3d(0,0,0) skewY(0);
-}
+
 * {
     margin: 0;
     padding: 0;
@@ -30,8 +44,10 @@ body {
 }
 
 .box-nav {
-    background-color: #EFFFFD;
+    background-color: #D6F2FF;
+ 
     width: 100%;
+
 }
 
 .inner-nav {
@@ -52,11 +68,11 @@ body {
 
 .menu a {
     text-decoration: none;
-    color: #4A6D8B;
-    font-family: "aktiv-grotesk-thin", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    font-size: 2.5vh;
+    color: #000000;
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 2.8vh;
     line-height: 2.5vh;
 
 }
@@ -123,6 +139,59 @@ main h1 {
 
 }
 
+/* Ensure parent container has some styles */
+.parent-container {
+    margin-top: 11vh;
+    display: flex;
+    justify-content: center;
+    /* Center child horizontally */
+    align-items: center;
+    /* Center child vertically if needed */
+
+
+}
+
+/* Center container styles */
+.center-container {
+    text-align: center;
+    /* Center text and elements inside the container */
+    p{
+        font-family: "Syncopate", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.3vh;
+  margin-bottom: 1vh;
+    }
+}
+
+/* Scroll bar styles */
+.scroll-bar {
+    margin: 0 auto;
+    width: 1px;
+    /* Adjust the width as needed */
+    height: 35px;
+    /* Adjust the height as needed */
+    background-color: #2B5569;
+    /* Just for visual reference */
+    
+    /* Space between the text and scroll bar */
+    animation: scrollShrink 1.3s linear infinite;
+}
+@keyframes scrollShrink {
+    0% {
+      transform: translateY(-20px) scaleY(0); /* 初期位置：上部にあり、元のサイズ */
+    }
+    20% {
+        transform: translateY(-20px) scaleY(0); /* 初期位置：上部にあり、元のサイズ */
+    }
+    50% {
+      transform: translateY(10px) scaleY(1); /* 中間位置：中央にあり、高さが半分 */
+    }
+    100% {
+      transform: translateY(40px) scaleY(0); /* 終了位置：下部にあり、高さが0 */
+    }
+  }
+  
 /* ---------------------------------------PROFILE--------------------------------- */
 
 .ABOUT_ME {

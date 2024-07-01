@@ -2,8 +2,8 @@
 @keyframes combinedAnime {
     from {
         filter: blur(3px);
-        transform: translate3d(0, 100%, 0) scale(1.02) skewY(7deg);
-        opacity: 0.4;
+        transform: translate3d(0, 100%, 0) scale(1.02) skewY(12deg);
+        opacity: 0.2;
     }
 
     to {
@@ -16,7 +16,7 @@
 /* Applying the new combined animation */
 .combinedEffect {
     animation-name: combinedAnime;
-    animation-duration: 1.4s;
+    animation-duration: 0.6s;
     animation-fill-mode: forwards;
 }
 
@@ -30,6 +30,7 @@ span.smoothTextTrigger {
     transition: 1s ease-in-out;
     display: block;
 }
+
 
 * {
     margin: 0;
@@ -344,10 +345,6 @@ main h1 {
 }
 
 /* ---------------------------------------FORM--------------------------------- */
-
-
-
-
 
 .CONTACT_ME {
     text-align: center;

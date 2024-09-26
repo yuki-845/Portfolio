@@ -1,0 +1,562 @@
+/* Combined animation */
+@keyframes combinedAnime {
+    from {
+        filter: blur(3px);
+        transform: translate3d(0, 100%, 0) scale(1.02) skewY(12deg);
+        opacity: 0.2;
+    }
+
+    to {
+        filter: blur(0);
+        transform: translate3d(0, 0, 0) scale(1) skewY(0);
+        opacity: 1;
+    }
+}
+
+/* Applying the new combined animation */
+.combinedEffect {
+    animation-name: combinedAnime;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+/* Additional styles to ensure the smooth text effect */
+span.smoothText {
+    overflow: hidden;
+    display: block;
+}
+
+span.smoothTextTrigger {
+    transition: 1s ease-in-out;
+    display: block;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: white;
+}
+
+.box-nav {
+    background-color: #D6F2FF;
+ 
+    width: 100%;
+
+}
+
+.inner-nav {
+    display: flex;
+
+
+    padding-left: 60vw;
+    list-style: none;
+}
+
+.menu {
+    position: relative;
+    padding-right: 1.8vw;
+    padding-top: 2.3vh;
+    padding-bottom: 2.3vh;
+    cursor: pointer;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000000;
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 2.8vh;
+    line-height: 2.5vh;
+
+}
+
+
+/* ハンバーガーアイコンのスタイル */
+.hamburger .btn-gNav {
+    display: none;
+    /* 初期状態で非表示 */
+    cursor: pointer;
+    padding: 25px;
+    margin-right: -15px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+}
+
+.gNav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+
+}
+
+.dev {
+
+    background-color: #D6F2FF;
+    font-size: 3vh;
+    /* 必要に応じてサイズを調整 */
+    font-family: "aktiv-grotesk-thin", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color: #2B5569;
+    line-height: 3.1vh;
+
+    padding-left: 12.5vw;
+    padding-top: 6.4vh;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    height: 83vh;
+    padding-top: 2vh;
+    background-color: #D6F2FF;
+}
+
+main h1 {
+    font-size: 27.5vh;
+    /* 必要に応じてサイズを調整 */
+    font-family: "aktiv-grotesk", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #2B5569;
+    line-height: 28.4vh;
+
+
+}
+
+/* Ensure parent container has some styles */
+.parent-container {
+    margin-top: 11vh;
+    display: flex;
+    justify-content: center;
+    /* Center child horizontally */
+    align-items: center;
+    /* Center child vertically if needed */
+
+
+}
+
+/* Center container styles */
+.center-container {
+    text-align: center;
+    /* Center text and elements inside the container */
+    p{
+        font-family: "Syncopate", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.3vh;
+  margin-bottom: 1vh;
+    }
+}
+
+/* Scroll bar styles */
+.scroll-bar {
+    margin: 0 auto;
+    width: 1px;
+    /* Adjust the width as needed */
+    height: 35px;
+    /* Adjust the height as needed */
+    background-color: #2B5569;
+    /* Just for visual reference */
+    
+    /* Space between the text and scroll bar */
+    animation: scrollShrink 1.3s linear infinite;
+}
+@keyframes scrollShrink {
+    0% {
+      transform: translateY(-20px) scaleY(0); /* 初期位置：上部にあり、元のサイズ */
+    }
+    20% {
+        transform: translateY(-20px) scaleY(0); /* 初期位置：上部にあり、元のサイズ */
+    }
+    50% {
+      transform: translateY(10px) scaleY(1); /* 中間位置：中央にあり、高さが半分 */
+    }
+    100% {
+      transform: translateY(40px) scaleY(0); /* 終了位置：下部にあり、高さが0 */
+    }
+  }
+  
+/* ---------------------------------------PROFILE--------------------------------- */
+
+.ABOUT_ME {
+    color: #3A476C;
+
+
+
+}
+
+.about_me {
+    padding: 9.4vh 0;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 50vw;
+    display: flex;
+    align-items: center;
+
+    img {
+        max-width: 100%;
+        /* 最大幅を100%に設定 */
+        height: auto;
+        width: 16.2vw;
+    }
+
+    .Text_ABOUT_ME {
+        text-align: left;
+
+        h2 {
+            font-size: 7vh;
+            font-family: "hiragino-mincho-pron", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        p {
+            color: #3D657B;
+            font-size: 1.2rem;
+            font-family: "Urbanist", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+        }
+    }
+
+}
+
+
+/* ---------------------------------------SKILL--------------------------------- */
+
+.WORKS {
+    background-color: #BFE4FF;
+    padding-bottom: 18vh;
+}
+
+.Works_Title {
+
+    text-align: center;
+    padding-top: 13vh;
+    padding-bottom: 7vh;
+
+    h1 {
+        color: #0F7FB9;
+        font-family: "hiragino-mincho-pron", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 18.7vh;
+        line-height: 18.7vh;
+    }
+
+    .Border_Works {
+        margin-top: 4.4vh;
+        margin-bottom: 5.3vh;
+        display: inline-block;
+        background-color: #3D657B;
+        width: 2px;
+        height: 7vh;
+
+    }
+
+    p {
+        color: #3D657B;
+        font-family: "Urbanist", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 100;
+        font-style: normal;
+    }
+}
+
+.Works {
+
+    color: #3D657B;
+
+    margin: 0 auto;
+    padding: 9.4vh 0;
+    display: flex;
+    align-items: center;
+
+    .Text_ABOUT_Works {
+        text-align: left;
+        max-width: 32vw;
+        margin-left: 6vw;
+        margin-right: 10vw;
+
+        h2 {
+            font-size: 9.2vh;
+            font-family: "hiragino-mincho-pron", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        p {
+            color: hsl(201, 34%, 36%);
+            font-size: 1.2rem;
+            font-family: "Urbanist", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+        }
+    }
+
+    .Image_Works {
+
+        background-color: #F3F3F8;
+        height: 53vh;
+        width: 54vw;
+
+        display: flex;
+        /* フレックスボックスを有効にする */
+        align-items: center;
+
+
+    }
+
+    /* 垂直方向に中央揃え */
+    .Image_Right {
+        margin-left: 2vw;
+        /* 最大幅を100%に設定 */
+        height: auto;
+        width: 38.5vw;
+
+    }
+
+    .Image_Left {
+        margin-left: 10.4vw;
+        height: auto;
+        width: 38.5vw;
+    }
+
+
+}
+
+/* ---------------------------------------FORM--------------------------------- */
+
+.CONTACT_ME {
+    text-align: center;
+
+
+    background-color: #D6F6FF;
+    padding-bottom: 10vh;
+}
+
+.CONTACT_Svg {
+    height: auto;
+    width: 100vw;
+    padding-bottom: 5vh;
+}
+
+.CONTACT_ME_Text {
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 43vw;
+    font-size: 1.2rem;
+    color: #2A404B;
+    padding-bottom: 4vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.comment {
+    padding-bottom: 10vh;
+}
+
+.contact-container {
+    padding: 20px;
+    width: 56vw;
+    max-width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.Name_Email {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8vh;
+}
+
+.form-group {
+    margin: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+    flex: 1;
+}
+
+label {
+    margin-top: 100px;
+}
+
+.Form-Item-Input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #35515D;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+}
+
+textarea {
+
+    resize: none;
+}
+
+button {
+
+    background-color: #6ECDFF;
+    border: none;
+    border-radius: 31px;
+    color: white;
+
+    width: 25vh;
+
+    aspect-ratio: 255/61;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-family: "aktiv-grotesk", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    cursor: pointer;
+
+}
+
+.cp_iptxt {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.cp_iptxt input[type='text'] {
+    font: 15px/24px sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.cp_iptxt input[type='email'] {
+    font: 15px/24px sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.cp_iptxt input[type='text']:focus {
+    outline: none;
+}
+
+.cp_iptxt input[type='email']:focus {
+    outline: none;
+}
+
+.ef {
+    padding: 4px 0;
+    border: 0;
+    border-bottom: 1px solid #1b2538;
+    background-color: transparent;
+}
+
+.ef~.focus_line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: 0.4s;
+    background-color: #00CCFF;
+}
+
+.ef:focus~.focus_line,
+.cp_iptxt.ef~.focus_line {
+    width: 100%;
+    transition: 0.4s;
+}
+
+.ef~label {
+    position: absolute;
+    z-index: 1;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    transition: 0.3s;
+    letter-spacing: 0.5px;
+    color: #9CCCD8;
+}
+
+
+.ef:focus~label,
+.cp_iptxt.ef~label {
+    font-size: 12px;
+    top: -120px;
+    transition: 0.3s;
+    color: #00CCFF;
+    z-index: 1;
+}
+
+/* ---------------------------------------Thank you for Comming--------------------------------- */
+
+.Thank_You {
+    background-color: white;
+
+    h1 {
+        padding-top: 20vh;
+        padding-bottom: 20vh;
+        text-align: center;
+        color: #6AD7FF;
+        font-size: 3rem;
+        font-family: "hiragino-mincho-pron", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+}
+
+.FOOTER {
+    background-color: #6AD7FF;
+}
+
+.size {
+    color: white;
+    /*青色にする*/
+}
+
+.Footer_Inner {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+
+    p {
+        padding-left: 12.5vw;
+        font-family: "aktiv-grotesk", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        color: white;
+    }
+
+    .Footer_Icon {
+        padding-right: 12.5vw;
+    }
+}
